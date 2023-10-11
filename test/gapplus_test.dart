@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gap/gap.dart';
+import 'package:gapplus/gapplus.dart';
 
 void main() {
   testWidgets('Gap constructors', (WidgetTester tester) async {
-    const Gap a = Gap(0);
+    const Gapplus a = Gapplus(0);
     expect(a.mainAxisExtent, 0);
     expect(a.crossAxisExtent, null);
     expect(a.color, null);
 
-    const Gap b = Gap(10, crossAxisExtent: 20, color: Colors.red);
+    const Gapplus b = Gapplus(10, crossAxisExtent: 20, color: Colors.red);
     expect(b.mainAxisExtent, 10);
     expect(b.crossAxisExtent, 20);
     expect(b.color, Colors.red);
@@ -24,7 +24,7 @@ void main() {
     expect(d.crossAxisExtent, 20);
     expect(d.color, Colors.red);
 
-    const Gap e = Gap.expand(10, color: Colors.red);
+    const Gapplus e = Gapplus.expand(10, color: Colors.red);
     expect(e.mainAxisExtent, 10);
     expect(e.crossAxisExtent, double.infinity);
     expect(e.color, Colors.red);
@@ -40,12 +40,12 @@ void main() {
       const Row(
         textDirection: TextDirection.ltr,
         children: <Widget>[
-          Gap(100, crossAxisExtent: 20),
+          Gapplus(100, crossAxisExtent: 20),
         ],
       ),
     );
 
-    final RenderBox box = tester.renderObject(find.byType(Gap));
+    final RenderBox box = tester.renderObject(find.byType(Gapplus));
     expect(box.size.width, 100);
     expect(box.size.height, 20);
   });
@@ -55,12 +55,12 @@ void main() {
       const Column(
         textDirection: TextDirection.ltr,
         children: <Widget>[
-          Gap(100, crossAxisExtent: 20),
+          Gapplus(100, crossAxisExtent: 20),
         ],
       ),
     );
 
-    final RenderBox box = tester.renderObject(find.byType(Gap));
+    final RenderBox box = tester.renderObject(find.byType(Gapplus));
     expect(box.size.height, 100);
     expect(box.size.width, 20);
   });
@@ -73,14 +73,14 @@ void main() {
           child: Column(
             textDirection: TextDirection.ltr,
             children: <Widget>[
-              Gap.expand(100),
+              Gapplus.expand(100),
             ],
           ),
         ),
       ),
     );
 
-    final RenderBox box = tester.renderObject(find.byType(Gap));
+    final RenderBox box = tester.renderObject(find.byType(Gapplus));
     expect(box.size.height, 100);
     expect(box.size.width, 200);
   });
@@ -160,7 +160,7 @@ void main() {
       'Throws FlutterError with correct message when Gap is not inside a Flex',
       (WidgetTester tester) async {
     await tester.pumpWidget(
-      const Gap(0),
+      const Gapplus(0),
     );
 
     await tester.pump();

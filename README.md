@@ -1,7 +1,7 @@
 # Gap
 Flutter widgets for easily adding gaps inside Flex widgets such as Columns and Rows or scrolling views.
 
-[![Pub](https://img.shields.io/pub/v/gap.svg)](https://pub.dartlang.org/packages/gap)
+[![Pub](https://img.shields.io/pub/v/gap.svg)](https://pub.dartlang.org/packages/gapplus)
 
 ### Introduction
 
@@ -16,7 +16,7 @@ When it comes to add empty space between widgets inside a `Column` or a `Row`, w
 In your library add the following import:
 
 ```dart
-import 'package:gap/gap.dart';
+import 'package:gapplus/gapplus.dart';
 ```
 
 Then you just have to add a `Gap` inside a `Column` or a `Row` with the specified extent.
@@ -39,7 +39,7 @@ This package also comes with a `MaxGap` widget.
 The `MaxGap` widget will try to fill the available space in a `Column` or a `Row` with the specified size. If the available space
 is lesser than the specified size, the `MaxGap` widget will only take the available space.
 
-It's useful when you want to have a gap that shrinks to avoid an overflow otherwise.
+It's useful when you want to have a gapplus that shrinks to avoid an overflow otherwise.
 
 
 ### Other parameters
@@ -62,12 +62,12 @@ return CustomScrollView(
 
 ## Changelog
 
-Please see the [Changelog](https://github.com/letsar/gap/blob/master/CHANGELOG.md) page to know what's recently changed.
+Please see the [Changelog](https://github.com/odejinmi/gapplus/blob/master/CHANGELOG.md) page to know what's recently changed.
 
 ## Contributions
 
 Feel free to contribute to this project.
 
-If you find a bug or want a feature, but don't know how to fix/implement it, please fill an [issue](https://github.com/letsar/gap/issues).  
-If you fixed a bug or implemented a feature, please send a [pull request](https://github.com/letsar/gap/pulls).
+If you find a bug or want a feature, but don't know how to fix/implement it, please fill an [issue](https://github.com/odejinmi/gapplus/issues).  
+If you fixed a bug or implemented a feature, please send a [pull request](https://github.com/odejinmi/gapplus/pulls).
 

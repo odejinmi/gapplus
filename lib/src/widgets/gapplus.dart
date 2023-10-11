@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-import 'package:gap/src/rendering/gap.dart';
+import 'package:gapplus/src/rendering/gap.dart';
 
 /// A widget that takes a fixed amount of space in the direction of its parent.
 ///
@@ -13,15 +13,15 @@ import 'package:gap/src/rendering/gap.dart';
 ///
 /// See also:
 ///
-///  * [MaxGap], a gap that can take, at most, the amount of space specified.
+///  * [MaxGap], a gapplus that can take, at most, the amount of space specified.
 ///  * [SliverGap], the sliver version of this widget.
-class Gap extends StatelessWidget {
+class Gapplus extends StatelessWidget {
   /// Creates a widget that takes a fixed [mainAxisExtent] of space in the
   /// direction of its parent.
   ///
   /// The [mainAxisExtent] must not be null and must be positive.
   /// The [crossAxisExtent] must be either null or positive.
-  const Gap(
+  const Gapplus(
     this.mainAxisExtent, {
     Key? key,
     this.crossAxisExtent,
@@ -34,7 +34,7 @@ class Gap extends StatelessWidget {
   /// direction of its parent and expands in the cross axis direction.
   ///
   /// The [mainAxisExtent] must not be null and must be positive.
-  const Gap.expand(
+  const Gapplus.expand(
     double mainAxisExtent, {
     Key? key,
     Color? color,
@@ -66,7 +66,7 @@ class Gap extends StatelessWidget {
   /// direction.
   final double? crossAxisExtent;
 
-  /// The color used to fill the gap.
+  /// The color used to fill the gapplus.
   final Color? color;
 
   @override
@@ -145,7 +145,7 @@ class MaxGap extends StatelessWidget {
   /// direction.
   final double? crossAxisExtent;
 
-  /// The color used to fill the gap.
+  /// The color used to fill the gapplus.
   final Color? color;
 
   @override

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
+import 'package:gapplus/gapplus.dart';
 
 void main() => runApp(const MyApp());
 
@@ -29,23 +29,23 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  const Scaffold(
       body: SafeArea(
         child: Column(
           children: <Widget>[
-             Gap.expand(20, color: Colors.red),
-             Gap(80),
-             Gap.expand(20, color: Colors.red),
+             Gapplus.expand(20, color: Colors.red),
+             Gapplus(80),
+             Gapplus.expand(20, color: Colors.red),
              MaxGap(2000),
-             Gap.expand(20, color: Colors.red),
+             Gapplus.expand(20, color: Colors.red),
             Row(
               children:  <Widget>[
-                Gap(20, color: Colors.green, crossAxisExtent: 20),
-                Gap(50),
-                Gap(20, color: Colors.green, crossAxisExtent: 20),
+                Gapplus(20, color: Colors.green, crossAxisExtent: 20),
+                Gapplus(50),
+                Gapplus(20, color: Colors.green, crossAxisExtent: 20),
               ],
             ),
-             Gap.expand(200, color: Colors.blue),
+             Gapplus.expand(200, color: Colors.blue),
           ],
         ),
       ),

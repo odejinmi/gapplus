@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
+import 'package:gapplus/gapplus.dart';
 
 void main() => runApp(const MyApp());
 

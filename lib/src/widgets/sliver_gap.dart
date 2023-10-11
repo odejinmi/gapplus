@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-import 'package:gap/src/rendering/sliver_gap.dart';
+import 'package:gapplus/src/rendering/sliver_gap.dart';
 
 /// A sliver that takes a fixed amount of space.
 ///
@@ -23,7 +23,7 @@ class SliverGap extends LeafRenderObjectWidget {
   /// Must not be null and must be positive.
   final double mainAxisExtent;
 
-  /// The color used to fill the gap.
+  /// The color used to fill the gapplus.
   final Color? color;
 
   @override

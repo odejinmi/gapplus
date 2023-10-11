@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gap/gap.dart';
+import 'package:gapplus/gapplus.dart';
 
 void main() {
   testWidgets('Gap inside horizontal ListView', (WidgetTester tester) async {
@@ -14,7 +14,7 @@ void main() {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: const <Widget>[
-                Gap(100),
+                Gapplus(100),
               ],
             ),
           ),
@@ -22,7 +22,7 @@ void main() {
       ),
     );
 
-    final RenderBox box = tester.renderObject(find.byType(Gap));
+    final RenderBox box = tester.renderObject(find.byType(Gapplus));
     expect(box.size.width, 100);
     expect(box.size.height, 200);
   });
@@ -36,7 +36,7 @@ void main() {
             width: 200,
             child: ListView(
               children: const <Widget>[
-                Gap(100),
+                Gapplus(100),
               ],
             ),
           ),
@@ -44,7 +44,7 @@ void main() {
       ),
     );
 
-    final RenderBox box = tester.renderObject(find.byType(Gap));
+    final RenderBox box = tester.renderObject(find.byType(Gapplus));
     expect(box.size.width, 200);
     expect(box.size.height, 100);
   });
@@ -59,7 +59,7 @@ void main() {
             width: 200,
             child: ListView(
               children: const <Widget>[
-                Gap(100, crossAxisExtent: 20),
+                Gapplus(100, crossAxisExtent: 20),
               ],
             ),
           ),
@@ -67,7 +67,7 @@ void main() {
       ),
     );
 
-    final RenderBox box = tester.renderObject(find.byType(Gap));
+    final RenderBox box = tester.renderObject(find.byType(Gapplus));
     expect(box.size.width, 200);
     expect(box.size.height, 100);
   });
@@ -83,7 +83,7 @@ void main() {
             child: SingleChildScrollView(
                 child: Row(
               children: <Widget>[
-                Gap(100),
+                Gapplus(100),
               ],
             )),
           ),
@@ -104,7 +104,7 @@ void main() {
               children: [
                 Container(width: 100),
                 const SingleChildScrollView(
-                  child: Gap(100),
+                  child: Gapplus(100),
                 ),
                 Container(width: 100),
               ],
@@ -114,7 +114,7 @@ void main() {
       ),
     );
 
-    final RenderBox box = tester.renderObject(find.byType(Gap));
+    final RenderBox box = tester.renderObject(find.byType(Gapplus));
     expect(box.size.height, 100);
     expect(box.size.width, 0);
   });
